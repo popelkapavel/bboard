@@ -31,6 +31,11 @@ namespace bboard {
         bezier BezSphere=new bezier(new double[] {0,0,0,0.5,0.5,1,1,1});
         bezier BezNail=new bezier(new double[] {0,0,0.5,0.2,.8,0.5,1,1});
         bezier BezSigma=new bezier(new double[] {0,0,0.25,0,.75,1,1,1});
+        bezier BezStair2=new bezier(new double[] {0,0,0,0.125,0.375,0.5 ,0.5,0.5,0.5,0.625,0.875,1 ,1,1});
+        bezier BezStair2b=new bezier(new double[] {0,0,0,0.5,0,0.5 ,0.5,0.5,0.5,1,0.5,1 ,1,1});
+        bezier BezStair4=new bezier(new double[] {0,0,0,0.625,0.1875,0.25 ,0.25,0.25,0.25,0.3125,0.4325,0.5 ,0.5,0.5,0.5,0.5625,0.6875,0.75 ,0.75,0.75,0.75,0.8125,0.9375,1 ,1,1});
+        bezier BezStair4b=new bezier(new double[] {0,0,0,0.25,0,0.25 ,0.25,0.25,0.25,0.5,0.25,0.5 ,0.5,0.5,0.5,0.75,0.5,0.75 ,0.75,0.75,0.75,1,0.75,1 ,1,1});
+        //bezier BezStair2=new bezier(new double[] {0,0,0,0.125,0.375,0.375 ,0.5,0.5,0.625,0.625,0.875,1,1,1});
         bezier Bez;
         double[] shape=new double[1024];
         bool White=true,AutoSnap=false;
@@ -638,6 +643,32 @@ namespace bboard {
           int dr=Radius;
           Repaint((int)(cx-r-dr),(int)(cy-r-dr),(int)(cx+r+dr),(int)(cy+r+dr),true);
         }
+        void ShapeA(bool shift,bool cl,bool nl,int mx,int my) {
+          if(mx==pix&&my==piy) return;
+          int px=pix,py=piy,cx,cy,dx,dy,ax,ay,bx,by;
+          if(cl) {
+            dx=(mx-pix)/2;dy=(my-piy)/2;
+            DrawLine2(px,py,ax=px-dy,ay=py+dx,false);
+            DrawLine2(ax,ay,bx=ax+dx,by=ay+dy,false);
+            DrawLine2(bx,by,ax=mx+dy-dx,ay=my-dx-dy,false);
+            DrawLine2(ax,ay,bx=mx+dy,by=my-dx,false);
+            DrawLine2(bx,by,mx,my,false);
+            hfmap.Sort(ref ax,ref ay,ref bx,ref by);            
+            hfmap.Sort(ref ax,ref ay,ref bx,ref by,px-dy,py+dx);
+            hfmap.Sort(ref ax,ref ay,ref bx,ref by,px-dy+dx,py+dx+dy);
+          } else {
+            dx=(mx-pix)/4+(my-piy)/4;dy=(my-piy)/4-(mx-pix)/4;
+            DrawLine2(px,py,ax=px+dx,ay=py+dy,false);
+            DrawLine2(ax,ay,bx=mx-dx,by=my-dy,false);
+            DrawLine2(bx,by,mx,my,false);
+          }
+          if(!shift) {pix=mx;piy=my;}
+          hfmap.Sort(ref px,ref py,ref mx,ref my);
+          hfmap.Sort(ref ax,ref ay,ref bx,ref by);
+          hfmap.Sort(ref px,ref py,ref ax,ref ay);
+          hfmap.Sort(ref bx,ref by,ref mx,ref my);
+          Repaint(px,py,mx,my,Radius,true);
+        }
         void ShapeQ(bool shift,bool move,int mx,int my) {
           if(mx==pix&&my==piy) return;
           float cx,cy,dx,dy,e=shift?1/3f:2/3f;
@@ -804,7 +835,7 @@ namespace bboard {
               case Keys.T:case Keys.H:case Keys.J:case Keys.K:              
               case Keys.U:case Keys.P:
               case Keys.O:case Keys.Q:case Keys.Z:
-              case Keys.L:
+              case Keys.L:case Keys.A:
                 if(mseq<1) PushUndo(true,k==Keys.I?"rect":k==Keys.N?"norm":k==Keys.B?"iso":null);
                 int mx=IX(lmx,lmy),my=IY(lmx,lmy);
                 int[] p=null;
@@ -812,6 +843,8 @@ namespace bboard {
                   ShapeO(shift,GDI.NumLock,mx,my); 
                 } else if(k==Keys.Z) {
                   ShapeR(shift,mx,my);
+                } else if(k==Keys.A) {
+                  ShapeA(shift,GDI.CapsLock,GDI.NumLock,mx,my);
                 } else if(k==Keys.Q) {
                   ShapeQ(shift,GDI.NumLock,mx,my); 
                 } else if(k==Keys.G) {
@@ -1334,7 +1367,9 @@ namespace bboard {
                 
 
         private void miHill_Click(object sender, EventArgs e) {
-          SetHill(int.Parse(GetTag(sender)));
+          int x=int.Parse(GetTag(sender));
+          if(x>4&&(GDI.ShiftKey||GDI.CtrlKey||GDI.RButton)) x+=1;
+          SetHill(x);
         }
         void SetHill(int tag) {
           ToolStripMenuItem x;          
@@ -1346,6 +1381,10 @@ namespace bboard {
           switch(tag) {
            case 2:Bez=BezCylinder;x=miHillCylinder;break;
            case 4:Bez=BezNail;x=miHillNail;break;
+           case 5:Bez=BezStair2;x=miHillStair2;break;
+           case 6:Bez=BezStair2b;x=miHillStair2;break;
+           case 7:Bez=BezStair4;x=miHillStair4;break;
+           case 8:Bez=BezStair4b;x=miHillStair4;break;
            case 1:Bez=BezSphere;x=miHillSphere;break;
            case 3:Bez=BezSigma;x=miHillSigma;break;
            default:Bez=BezCone;x=miHillCone;break;

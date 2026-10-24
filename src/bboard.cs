@@ -448,7 +448,11 @@ namespace bboard {
         int x;
         x=x0;x0=x1;x1=x;
       }
+      public static void Sort(ref int x0,ref int x1,int x) {
+        if(x<x0) x0=x;else if(x>x1) x1=x;
+      }
       public static void Sort(ref int x0,ref int y0,ref int x1,ref int y1) { Sort(ref x0,ref x1);Sort(ref y0,ref y1);}
+      public static void Sort(ref int x0,ref int y0,ref int x1,ref int y1,int x,int y) { Sort(ref x0,ref x1,x);Sort(ref y0,ref y1,y);}
       public static void MinMax(ref int x0,ref int x1,int x2,int x3) {
         int x;
         if(x0>x2) {x=x0;x0=x2;x2=x;}

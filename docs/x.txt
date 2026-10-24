@@ -1,0 +1,48 @@
+Your submission ID is 741887. Please allow up to 5 business days for processing. You will receive an email approving or denying your submission. If you have any questions, please contact our developer support team, referencing your submission ID at download.developer.support@redventures.com.
+
+Your submission ID is 743014. Please allow up to 5 business days for processing. You will receive an email approving or denying your submission. If you have any questions, please contact our developer support team, referencing your submission ID at download.developer.support@redventures.com.
+
+PLATFORM
+Windows
+
+PRODUCT NAME
+Blackboard
+
+VERSION
+0.15
+
+RELEASE DATE
+3/14/2021
+
+PRODUCT DOWNLOAD URL:
+http://popelkapavel.sweb.cz/bboard/bboard015.zip
+
+LONG DESCRIPTION
+Blackboard is simple freehand drawing tool onto paper with height and color.
+It has several modes for tool height shape and combination.
+And has black and white mode.
+It can draw various shapes from keyboard.
+
+WHAT'S NEW
+new product
+
+PRODUCT INFORMATION URL
+http://popelkapavel.sweb.cz/bboard/bboard.htm
+
+PRODUCT ICON
+http://popelkapavel.sweb.cz/bboard/bboardico.png
+
+PRODUCT SCREENSHOTS
+http://popelkapavel.sweb.cz/bboard/screen1.png
+http://popelkapavel.sweb.cz/bboard/screen2.png
+http://popelkapavel.sweb.cz/bboard/screen3.png
+
+LICENSE TYPE
+Free
+
+PRICE IN U.S. DOLLARS
+0
+
+TRIAL LIMITATIONS:
+no limits
+

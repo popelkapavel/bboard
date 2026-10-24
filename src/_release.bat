@@ -1,4 +1,4 @@
-set VER=015
+set VER=017
 del www\bboard%VER%.zip
 del www\bboard%VER%_src.zip
 cd bin

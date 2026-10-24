@@ -31,6 +31,39 @@
       this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
       this.mMain = new System.Windows.Forms.MenuStrip();
+      this.timer = new System.Windows.Forms.Timer(this.components);
+      this.bColor = new System.Windows.Forms.Button();
+      this.panel = new System.Windows.Forms.Panel();
+      this.bRadius1 = new System.Windows.Forms.Button();
+      this.bRadius2 = new System.Windows.Forms.Button();
+      this.bBlue = new System.Windows.Forms.Button();
+      this.button8 = new System.Windows.Forms.Button();
+      this.button7 = new System.Windows.Forms.Button();
+      this.button5 = new System.Windows.Forms.Button();
+      this.button4 = new System.Windows.Forms.Button();
+      this.button6 = new System.Windows.Forms.Button();
+      this.bColorGr1 = new System.Windows.Forms.Button();
+      this.bColorGr3 = new System.Windows.Forms.Button();
+      this.bColorGr2 = new System.Windows.Forms.Button();
+      this.bGY = new System.Windows.Forms.Button();
+      this.bGreen = new System.Windows.Forms.Button();
+      this.bRed = new System.Windows.Forms.Button();
+      this.bColorGr4 = new System.Windows.Forms.Button();
+      this.bYellow = new System.Windows.Forms.Button();
+      this.button1 = new System.Windows.Forms.Button();
+      this.bCyan = new System.Windows.Forms.Button();
+      this.bWhite = new System.Windows.Forms.Button();
+      this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+      this.bShape = new System.Windows.Forms.Button();
+      this.bHill = new System.Windows.Forms.Button();
+      this.bCombine = new System.Windows.Forms.Button();
+      this.br5 = new System.Windows.Forms.Button();
+      this.br4 = new System.Windows.Forms.Button();
+      this.br3 = new System.Windows.Forms.Button();
+      this.br2 = new System.Windows.Forms.Button();
+      this.br1 = new System.Windows.Forms.Button();
+      this.bh4 = new System.Windows.Forms.Button();
+      this.bh2 = new System.Windows.Forms.Button();
       this.miFile = new System.Windows.Forms.ToolStripMenuItem();
       this.miFileNew = new System.Windows.Forms.ToolStripMenuItem();
       this.miFileOpen = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +92,11 @@
       this.miHillCylinder = new System.Windows.Forms.ToolStripMenuItem();
       this.miHillSigma = new System.Windows.Forms.ToolStripMenuItem();
       this.miHillNail = new System.Windows.Forms.ToolStripMenuItem();
+      this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+      this.miHillStair2 = new System.Windows.Forms.ToolStripMenuItem();
+      this.miHillStair4 = new System.Windows.Forms.ToolStripMenuItem();
+      this.miHillStair2b = new System.Windows.Forms.ToolStripMenuItem();
+      this.miHillStair4b = new System.Windows.Forms.ToolStripMenuItem();
       this.miCombine = new System.Windows.Forms.ToolStripMenuItem();
       this.miCombineMax = new System.Windows.Forms.ToolStripMenuItem();
       this.miCombineMul = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,44 +113,11 @@
       this.rotateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.rGBCMYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.rBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.timer = new System.Windows.Forms.Timer(this.components);
-      this.bColor = new System.Windows.Forms.Button();
-      this.panel = new System.Windows.Forms.Panel();
-      this.bRadius1 = new System.Windows.Forms.Button();
-      this.bRadius2 = new System.Windows.Forms.Button();
-      this.bShape = new System.Windows.Forms.Button();
-      this.bHill = new System.Windows.Forms.Button();
-      this.bCombine = new System.Windows.Forms.Button();
-      this.bBlue = new System.Windows.Forms.Button();
-      this.button8 = new System.Windows.Forms.Button();
-      this.button7 = new System.Windows.Forms.Button();
-      this.button5 = new System.Windows.Forms.Button();
-      this.button4 = new System.Windows.Forms.Button();
-      this.button6 = new System.Windows.Forms.Button();
-      this.bColorGr1 = new System.Windows.Forms.Button();
-      this.bColorGr3 = new System.Windows.Forms.Button();
-      this.bColorGr2 = new System.Windows.Forms.Button();
-      this.bGY = new System.Windows.Forms.Button();
-      this.bGreen = new System.Windows.Forms.Button();
-      this.bRed = new System.Windows.Forms.Button();
-      this.bColorGr4 = new System.Windows.Forms.Button();
-      this.bYellow = new System.Windows.Forms.Button();
-      this.button1 = new System.Windows.Forms.Button();
-      this.bCyan = new System.Windows.Forms.Button();
-      this.bWhite = new System.Windows.Forms.Button();
-      this.br5 = new System.Windows.Forms.Button();
-      this.br4 = new System.Windows.Forms.Button();
-      this.br3 = new System.Windows.Forms.Button();
-      this.br2 = new System.Windows.Forms.Button();
-      this.br1 = new System.Windows.Forms.Button();
-      this.bh4 = new System.Windows.Forms.Button();
-      this.bh2 = new System.Windows.Forms.Button();
       this.bBW = new System.Windows.Forms.Button();
       this.bh1 = new System.Windows.Forms.Button();
       this.bClear = new System.Windows.Forms.Button();
       this.bh3 = new System.Windows.Forms.Button();
       this.bh5 = new System.Windows.Forms.Button();
-      this.toolTip = new System.Windows.Forms.ToolTip(this.components);
       this.mMain.SuspendLayout();
       this.panel.SuspendLayout();
       this.SuspendLayout();
@@ -131,409 +136,6 @@
       this.mMain.Size = new System.Drawing.Size(259, 24);
       this.mMain.TabIndex = 0;
       this.mMain.Text = "menuStrip1";
-      // 
-      // miFile
-      // 
-      this.miFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miFileNew,
-            this.miFileOpen,
-            this.toolStripSeparator6,
-            this.miFileSave,
-            this.miSaveAs,
-            this.miExport,
-            this.toolStripSeparator1,
-            this.miPage,
-            this.printToolStripMenuItem,
-            this.toolStripSeparator7,
-            this.miFileExit});
-      this.miFile.Image = global::bboard.Properties.Resources._new;
-      this.miFile.Name = "miFile";
-      this.miFile.Size = new System.Drawing.Size(41, 20);
-      this.miFile.Text = "&F";
-      this.miFile.ToolTipText = "File";
-      // 
-      // miFileNew
-      // 
-      this.miFileNew.Image = global::bboard.Properties.Resources._new;
-      this.miFileNew.Name = "miFileNew";
-      this.miFileNew.Size = new System.Drawing.Size(124, 22);
-      this.miFileNew.Tag = "new";
-      this.miFileNew.Text = "&New";
-      this.miFileNew.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // miFileOpen
-      // 
-      this.miFileOpen.Image = global::bboard.Properties.Resources.open;
-      this.miFileOpen.Name = "miFileOpen";
-      this.miFileOpen.Size = new System.Drawing.Size(124, 22);
-      this.miFileOpen.Tag = "open";
-      this.miFileOpen.Text = "&Open";
-      this.miFileOpen.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // toolStripSeparator6
-      // 
-      this.toolStripSeparator6.Name = "toolStripSeparator6";
-      this.toolStripSeparator6.Size = new System.Drawing.Size(121, 6);
-      // 
-      // miFileSave
-      // 
-      this.miFileSave.Image = global::bboard.Properties.Resources.save;
-      this.miFileSave.Name = "miFileSave";
-      this.miFileSave.Size = new System.Drawing.Size(124, 22);
-      this.miFileSave.Tag = "save";
-      this.miFileSave.Text = "&Save";
-      this.miFileSave.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // miSaveAs
-      // 
-      this.miSaveAs.Image = global::bboard.Properties.Resources.saveas;
-      this.miSaveAs.Name = "miSaveAs";
-      this.miSaveAs.Size = new System.Drawing.Size(124, 22);
-      this.miSaveAs.Tag = "saveas";
-      this.miSaveAs.Text = "S&ave as ...";
-      this.miSaveAs.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // miExport
-      // 
-      this.miExport.Image = global::bboard.Properties.Resources.export;
-      this.miExport.Name = "miExport";
-      this.miExport.Size = new System.Drawing.Size(124, 22);
-      this.miExport.Tag = "export";
-      this.miExport.Text = "&Export ...";
-      this.miExport.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // toolStripSeparator1
-      // 
-      this.toolStripSeparator1.Name = "toolStripSeparator1";
-      this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
-      // 
-      // miPage
-      // 
-      this.miPage.Image = global::bboard.Properties.Resources.page;
-      this.miPage.Name = "miPage";
-      this.miPage.Size = new System.Drawing.Size(124, 22);
-      this.miPage.Tag = "page";
-      this.miPage.Text = "Pa&ge ...";
-      this.miPage.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // printToolStripMenuItem
-      // 
-      this.printToolStripMenuItem.Image = global::bboard.Properties.Resources.print;
-      this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-      this.printToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-      this.printToolStripMenuItem.Tag = "print";
-      this.printToolStripMenuItem.Text = "&Print ...";
-      this.printToolStripMenuItem.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // toolStripSeparator7
-      // 
-      this.toolStripSeparator7.Name = "toolStripSeparator7";
-      this.toolStripSeparator7.Size = new System.Drawing.Size(121, 6);
-      // 
-      // miFileExit
-      // 
-      this.miFileExit.Image = global::bboard.Properties.Resources.close;
-      this.miFileExit.Name = "miFileExit";
-      this.miFileExit.Size = new System.Drawing.Size(124, 22);
-      this.miFileExit.Tag = "exit";
-      this.miFileExit.Text = "&Exit";
-      this.miFileExit.Click += new System.EventHandler(this.miFile_Click);
-      // 
-      // miEdit
-      // 
-      this.miEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miEditUndo,
-            this.redoToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.miEditClear,
-            this.miEditInvert,
-            this.miEditBlur,
-            this.layersToolStripMenuItem,
-            this.toolStripSeparator5,
-            this.miAutoSnap});
-      this.miEdit.Image = global::bboard.Properties.Resources.clear;
-      this.miEdit.Name = "miEdit";
-      this.miEdit.Size = new System.Drawing.Size(41, 20);
-      this.miEdit.Text = "&E";
-      this.miEdit.ToolTipText = "Edit";
-      // 
-      // miEditUndo
-      // 
-      this.miEditUndo.Image = global::bboard.Properties.Resources.undo;
-      this.miEditUndo.Name = "miEditUndo";
-      this.miEditUndo.Size = new System.Drawing.Size(129, 22);
-      this.miEditUndo.Tag = "undo";
-      this.miEditUndo.Text = "&Undo";
-      this.miEditUndo.Click += new System.EventHandler(this.miEdit_Click);
-      // 
-      // redoToolStripMenuItem
-      // 
-      this.redoToolStripMenuItem.Image = global::bboard.Properties.Resources.redo;
-      this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-      this.redoToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-      this.redoToolStripMenuItem.Tag = "redo";
-      this.redoToolStripMenuItem.Text = "&Redo";
-      this.redoToolStripMenuItem.Click += new System.EventHandler(this.miEdit_Click);
-      // 
-      // toolStripSeparator3
-      // 
-      this.toolStripSeparator3.Name = "toolStripSeparator3";
-      this.toolStripSeparator3.Size = new System.Drawing.Size(126, 6);
-      // 
-      // miEditClear
-      // 
-      this.miEditClear.Image = global::bboard.Properties.Resources.clear;
-      this.miEditClear.Name = "miEditClear";
-      this.miEditClear.Size = new System.Drawing.Size(129, 22);
-      this.miEditClear.Tag = "clear";
-      this.miEditClear.Text = "&Clear";
-      this.miEditClear.Click += new System.EventHandler(this.miEdit_Click);
-      // 
-      // miEditInvert
-      // 
-      this.miEditInvert.Image = global::bboard.Properties.Resources.invert;
-      this.miEditInvert.Name = "miEditInvert";
-      this.miEditInvert.Size = new System.Drawing.Size(129, 22);
-      this.miEditInvert.Tag = "invert";
-      this.miEditInvert.Text = "&Invert";
-      this.miEditInvert.Click += new System.EventHandler(this.miEdit_Click);
-      // 
-      // miEditBlur
-      // 
-      this.miEditBlur.Image = global::bboard.Properties.Resources.blur;
-      this.miEditBlur.Name = "miEditBlur";
-      this.miEditBlur.Size = new System.Drawing.Size(129, 22);
-      this.miEditBlur.Tag = "blur";
-      this.miEditBlur.Text = "&Blur";
-      this.miEditBlur.Click += new System.EventHandler(this.miEdit_Click);
-      // 
-      // layersToolStripMenuItem
-      // 
-      this.layersToolStripMenuItem.Image = global::bboard.Properties.Resources.layers;
-      this.layersToolStripMenuItem.Name = "layersToolStripMenuItem";
-      this.layersToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-      this.layersToolStripMenuItem.Tag = "layers";
-      this.layersToolStripMenuItem.Text = "Layers";
-      this.layersToolStripMenuItem.Click += new System.EventHandler(this.miEdit_Click);
-      // 
-      // toolStripSeparator5
-      // 
-      this.toolStripSeparator5.Name = "toolStripSeparator5";
-      this.toolStripSeparator5.Size = new System.Drawing.Size(126, 6);
-      // 
-      // miAutoSnap
-      // 
-      this.miAutoSnap.Image = global::bboard.Properties.Resources.snap;
-      this.miAutoSnap.Name = "miAutoSnap";
-      this.miAutoSnap.Size = new System.Drawing.Size(129, 22);
-      this.miAutoSnap.Text = "&Auto Snap";
-      this.miAutoSnap.Click += new System.EventHandler(this.miAutoSnap_Click);
-      // 
-      // miHill
-      // 
-      this.miHill.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miHillCone,
-            this.miHillSphere,
-            this.miHillCylinder,
-            this.miHillSigma,
-            this.miHillNail});
-      this.miHill.Image = global::bboard.Properties.Resources.cone;
-      this.miHill.Name = "miHill";
-      this.miHill.Size = new System.Drawing.Size(44, 20);
-      this.miHill.Text = "&H";
-      this.miHill.ToolTipText = "Hill";
-      // 
-      // miHillCone
-      // 
-      this.miHillCone.Image = global::bboard.Properties.Resources.cone;
-      this.miHillCone.Name = "miHillCone";
-      this.miHillCone.Size = new System.Drawing.Size(118, 22);
-      this.miHillCone.Tag = "0";
-      this.miHillCone.Text = "&Cone";
-      this.miHillCone.Click += new System.EventHandler(this.miHill_Click);
-      // 
-      // miHillSphere
-      // 
-      this.miHillSphere.Image = global::bboard.Properties.Resources.sphere;
-      this.miHillSphere.Name = "miHillSphere";
-      this.miHillSphere.Size = new System.Drawing.Size(118, 22);
-      this.miHillSphere.Tag = "1";
-      this.miHillSphere.Text = "&Sphere";
-      this.miHillSphere.Click += new System.EventHandler(this.miHill_Click);
-      // 
-      // miHillCylinder
-      // 
-      this.miHillCylinder.Image = global::bboard.Properties.Resources.cylinder;
-      this.miHillCylinder.Name = "miHillCylinder";
-      this.miHillCylinder.Size = new System.Drawing.Size(118, 22);
-      this.miHillCylinder.Tag = "2";
-      this.miHillCylinder.Text = "Cy&linder";
-      this.miHillCylinder.Click += new System.EventHandler(this.miHill_Click);
-      // 
-      // miHillSigma
-      // 
-      this.miHillSigma.Image = global::bboard.Properties.Resources.sigma;
-      this.miHillSigma.Name = "miHillSigma";
-      this.miHillSigma.Size = new System.Drawing.Size(118, 22);
-      this.miHillSigma.Tag = "3";
-      this.miHillSigma.Text = "Si&gma";
-      this.miHillSigma.Click += new System.EventHandler(this.miHill_Click);
-      // 
-      // miHillNail
-      // 
-      this.miHillNail.Image = global::bboard.Properties.Resources.nail;
-      this.miHillNail.Name = "miHillNail";
-      this.miHillNail.Size = new System.Drawing.Size(118, 22);
-      this.miHillNail.Tag = "4";
-      this.miHillNail.Text = "&Nail";
-      this.miHillNail.Click += new System.EventHandler(this.miHill_Click);
-      // 
-      // miCombine
-      // 
-      this.miCombine.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miCombineMax,
-            this.miCombineMul,
-            this.miCombineAdd,
-            this.toolStripSeparator4,
-            this.miCombineNone});
-      this.miCombine.Image = global::bboard.Properties.Resources.max;
-      this.miCombine.Name = "miCombine";
-      this.miCombine.Size = new System.Drawing.Size(43, 20);
-      this.miCombine.Text = "&A";
-      this.miCombine.ToolTipText = "Combine";
-      // 
-      // miCombineMax
-      // 
-      this.miCombineMax.Image = global::bboard.Properties.Resources.max;
-      this.miCombineMax.Name = "miCombineMax";
-      this.miCombineMax.Size = new System.Drawing.Size(103, 22);
-      this.miCombineMax.Tag = "1";
-      this.miCombineMax.Text = "Ma&x";
-      this.miCombineMax.Click += new System.EventHandler(this.miCombine_Click);
-      // 
-      // miCombineMul
-      // 
-      this.miCombineMul.Image = global::bboard.Properties.Resources.mult;
-      this.miCombineMul.Name = "miCombineMul";
-      this.miCombineMul.Size = new System.Drawing.Size(103, 22);
-      this.miCombineMul.Tag = "3";
-      this.miCombineMul.Text = "Mul&t";
-      this.miCombineMul.Click += new System.EventHandler(this.miCombine_Click);
-      // 
-      // miCombineAdd
-      // 
-      this.miCombineAdd.Image = global::bboard.Properties.Resources.add;
-      this.miCombineAdd.Name = "miCombineAdd";
-      this.miCombineAdd.Size = new System.Drawing.Size(103, 22);
-      this.miCombineAdd.Tag = "5";
-      this.miCombineAdd.Text = "&Add";
-      this.miCombineAdd.Click += new System.EventHandler(this.miCombine_Click);
-      // 
-      // toolStripSeparator4
-      // 
-      this.toolStripSeparator4.Name = "toolStripSeparator4";
-      this.toolStripSeparator4.Size = new System.Drawing.Size(100, 6);
-      // 
-      // miCombineNone
-      // 
-      this.miCombineNone.Image = global::bboard.Properties.Resources.color;
-      this.miCombineNone.Name = "miCombineNone";
-      this.miCombineNone.Size = new System.Drawing.Size(103, 22);
-      this.miCombineNone.Tag = "0";
-      this.miCombineNone.Text = "Non&e";
-      this.miCombineNone.Click += new System.EventHandler(this.miCombine_Click);
-      // 
-      // miShape
-      // 
-      this.miShape.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miShapeCircle,
-            this.miShapeSquare,
-            this.miShapeDiamond});
-      this.miShape.Image = global::bboard.Properties.Resources.circle;
-      this.miShape.Name = "miShape";
-      this.miShape.Size = new System.Drawing.Size(41, 20);
-      this.miShape.Text = "&S";
-      // 
-      // miShapeCircle
-      // 
-      this.miShapeCircle.Image = global::bboard.Properties.Resources.circle;
-      this.miShapeCircle.Name = "miShapeCircle";
-      this.miShapeCircle.Size = new System.Drawing.Size(123, 22);
-      this.miShapeCircle.Tag = "0";
-      this.miShapeCircle.Text = "&Circle";
-      this.miShapeCircle.Click += new System.EventHandler(this.miShape_Click);
-      // 
-      // miShapeSquare
-      // 
-      this.miShapeSquare.Image = global::bboard.Properties.Resources.square;
-      this.miShapeSquare.Name = "miShapeSquare";
-      this.miShapeSquare.Size = new System.Drawing.Size(123, 22);
-      this.miShapeSquare.Tag = "1";
-      this.miShapeSquare.Text = "&Square";
-      this.miShapeSquare.Click += new System.EventHandler(this.miShape_Click);
-      // 
-      // miShapeDiamond
-      // 
-      this.miShapeDiamond.Image = global::bboard.Properties.Resources.diamond;
-      this.miShapeDiamond.Name = "miShapeDiamond";
-      this.miShapeDiamond.Size = new System.Drawing.Size(123, 22);
-      this.miShapeDiamond.Tag = "2";
-      this.miShapeDiamond.Text = "&Diamond";
-      this.miShapeDiamond.Click += new System.EventHandler(this.miShape_Click);
-      // 
-      // miColor
-      // 
-      this.miColor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miHillWhite,
-            this.toolStripSeparator2,
-            this.rotateToolStripMenuItem,
-            this.rGBCMYToolStripMenuItem,
-            this.rBToolStripMenuItem});
-      this.miColor.Image = global::bboard.Properties.Resources.white;
-      this.miColor.Name = "miColor";
-      this.miColor.Size = new System.Drawing.Size(43, 20);
-      this.miColor.Text = "&C";
-      this.miColor.ToolTipText = "Color";
-      // 
-      // miHillWhite
-      // 
-      this.miHillWhite.Image = global::bboard.Properties.Resources.white;
-      this.miHillWhite.Name = "miHillWhite";
-      this.miHillWhite.Size = new System.Drawing.Size(149, 22);
-      this.miHillWhite.Text = "&White / Black";
-      this.miHillWhite.Click += new System.EventHandler(this.miWhite_Click);
-      // 
-      // toolStripSeparator2
-      // 
-      this.toolStripSeparator2.Name = "toolStripSeparator2";
-      this.toolStripSeparator2.Size = new System.Drawing.Size(146, 6);
-      // 
-      // rotateToolStripMenuItem
-      // 
-      this.rotateToolStripMenuItem.Image = global::bboard.Properties.Resources.rgb2brg;
-      this.rotateToolStripMenuItem.Name = "rotateToolStripMenuItem";
-      this.rotateToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-      this.rotateToolStripMenuItem.Tag = "rotate";
-      this.rotateToolStripMenuItem.Text = "Rotate";
-      this.rotateToolStripMenuItem.Click += new System.EventHandler(this.miMColor_Click);
-      // 
-      // rGBCMYToolStripMenuItem
-      // 
-      this.rGBCMYToolStripMenuItem.Image = global::bboard.Properties.Resources.rgb2cmy;
-      this.rGBCMYToolStripMenuItem.Name = "rGBCMYToolStripMenuItem";
-      this.rGBCMYToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-      this.rGBCMYToolStripMenuItem.Tag = "rgb2cmy";
-      this.rGBCMYToolStripMenuItem.Text = "RGB <-> CMY";
-      this.rGBCMYToolStripMenuItem.Click += new System.EventHandler(this.miMColor_Click);
-      // 
-      // rBToolStripMenuItem
-      // 
-      this.rBToolStripMenuItem.Image = global::bboard.Properties.Resources.rgb2bgr;
-      this.rBToolStripMenuItem.Name = "rBToolStripMenuItem";
-      this.rBToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-      this.rBToolStripMenuItem.Tag = "rxb";
-      this.rBToolStripMenuItem.Text = "R <-> B";
-      this.rBToolStripMenuItem.Click += new System.EventHandler(this.miMColor_Click);
       // 
       // timer
       // 
@@ -631,51 +233,6 @@
       this.toolTip.SetToolTip(this.bRadius2, "Radius");
       this.bRadius2.UseVisualStyleBackColor = false;
       this.bRadius2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bRadius_MouseUp);
-      // 
-      // bShape
-      // 
-      this.bShape.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.bShape.BackColor = System.Drawing.SystemColors.Control;
-      this.bShape.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-      this.bShape.Image = global::bboard.Properties.Resources.circle;
-      this.bShape.Location = new System.Drawing.Point(43, 70);
-      this.bShape.Name = "bShape";
-      this.bShape.Size = new System.Drawing.Size(21, 21);
-      this.bShape.TabIndex = 47;
-      this.bShape.TabStop = false;
-      this.bShape.Tag = "shape";
-      this.bShape.UseVisualStyleBackColor = false;
-      this.bShape.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button_MouseUp);
-      // 
-      // bHill
-      // 
-      this.bHill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.bHill.BackColor = System.Drawing.SystemColors.Control;
-      this.bHill.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-      this.bHill.Image = global::bboard.Properties.Resources.cone;
-      this.bHill.Location = new System.Drawing.Point(1, 70);
-      this.bHill.Name = "bHill";
-      this.bHill.Size = new System.Drawing.Size(21, 21);
-      this.bHill.TabIndex = 46;
-      this.bHill.TabStop = false;
-      this.bHill.Tag = "hill";
-      this.bHill.UseVisualStyleBackColor = false;
-      this.bHill.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button_MouseUp);
-      // 
-      // bCombine
-      // 
-      this.bCombine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-      this.bCombine.BackColor = System.Drawing.SystemColors.Control;
-      this.bCombine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-      this.bCombine.Image = global::bboard.Properties.Resources.max;
-      this.bCombine.Location = new System.Drawing.Point(22, 70);
-      this.bCombine.Name = "bCombine";
-      this.bCombine.Size = new System.Drawing.Size(21, 21);
-      this.bCombine.TabIndex = 45;
-      this.bCombine.TabStop = false;
-      this.bCombine.Tag = "comb";
-      this.bCombine.UseVisualStyleBackColor = false;
-      this.bCombine.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button_MouseUp);
       // 
       // bBlue
       // 
@@ -915,6 +472,51 @@
       this.bWhite.UseVisualStyleBackColor = false;
       this.bWhite.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bColor_MouseUp);
       // 
+      // bShape
+      // 
+      this.bShape.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.bShape.BackColor = System.Drawing.SystemColors.Control;
+      this.bShape.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+      this.bShape.Image = global::bboard.Properties.Resources.circle;
+      this.bShape.Location = new System.Drawing.Point(43, 70);
+      this.bShape.Name = "bShape";
+      this.bShape.Size = new System.Drawing.Size(21, 21);
+      this.bShape.TabIndex = 47;
+      this.bShape.TabStop = false;
+      this.bShape.Tag = "shape";
+      this.bShape.UseVisualStyleBackColor = false;
+      this.bShape.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button_MouseUp);
+      // 
+      // bHill
+      // 
+      this.bHill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.bHill.BackColor = System.Drawing.SystemColors.Control;
+      this.bHill.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+      this.bHill.Image = global::bboard.Properties.Resources.cone;
+      this.bHill.Location = new System.Drawing.Point(1, 70);
+      this.bHill.Name = "bHill";
+      this.bHill.Size = new System.Drawing.Size(21, 21);
+      this.bHill.TabIndex = 46;
+      this.bHill.TabStop = false;
+      this.bHill.Tag = "hill";
+      this.bHill.UseVisualStyleBackColor = false;
+      this.bHill.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button_MouseUp);
+      // 
+      // bCombine
+      // 
+      this.bCombine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.bCombine.BackColor = System.Drawing.SystemColors.Control;
+      this.bCombine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+      this.bCombine.Image = global::bboard.Properties.Resources.max;
+      this.bCombine.Location = new System.Drawing.Point(22, 70);
+      this.bCombine.Name = "bCombine";
+      this.bCombine.Size = new System.Drawing.Size(21, 21);
+      this.bCombine.TabIndex = 45;
+      this.bCombine.TabStop = false;
+      this.bCombine.Tag = "comb";
+      this.bCombine.UseVisualStyleBackColor = false;
+      this.bCombine.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button_MouseUp);
+      // 
       // br5
       // 
       this.br5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1019,6 +621,455 @@
       this.bh2.Tag = "130";
       this.bh2.UseVisualStyleBackColor = false;
       this.bh2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Height_MouseUp);
+      // 
+      // miFile
+      // 
+      this.miFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miFileNew,
+            this.miFileOpen,
+            this.toolStripSeparator6,
+            this.miFileSave,
+            this.miSaveAs,
+            this.miExport,
+            this.toolStripSeparator1,
+            this.miPage,
+            this.printToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.miFileExit});
+      this.miFile.Image = global::bboard.Properties.Resources._new;
+      this.miFile.Name = "miFile";
+      this.miFile.Size = new System.Drawing.Size(41, 20);
+      this.miFile.Text = "&F";
+      this.miFile.ToolTipText = "File";
+      // 
+      // miFileNew
+      // 
+      this.miFileNew.Image = global::bboard.Properties.Resources._new;
+      this.miFileNew.Name = "miFileNew";
+      this.miFileNew.Size = new System.Drawing.Size(124, 22);
+      this.miFileNew.Tag = "new";
+      this.miFileNew.Text = "&New";
+      this.miFileNew.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // miFileOpen
+      // 
+      this.miFileOpen.Image = global::bboard.Properties.Resources.open;
+      this.miFileOpen.Name = "miFileOpen";
+      this.miFileOpen.Size = new System.Drawing.Size(124, 22);
+      this.miFileOpen.Tag = "open";
+      this.miFileOpen.Text = "&Open";
+      this.miFileOpen.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // toolStripSeparator6
+      // 
+      this.toolStripSeparator6.Name = "toolStripSeparator6";
+      this.toolStripSeparator6.Size = new System.Drawing.Size(121, 6);
+      // 
+      // miFileSave
+      // 
+      this.miFileSave.Image = global::bboard.Properties.Resources.save;
+      this.miFileSave.Name = "miFileSave";
+      this.miFileSave.Size = new System.Drawing.Size(124, 22);
+      this.miFileSave.Tag = "save";
+      this.miFileSave.Text = "&Save";
+      this.miFileSave.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // miSaveAs
+      // 
+      this.miSaveAs.Image = global::bboard.Properties.Resources.saveas;
+      this.miSaveAs.Name = "miSaveAs";
+      this.miSaveAs.Size = new System.Drawing.Size(124, 22);
+      this.miSaveAs.Tag = "saveas";
+      this.miSaveAs.Text = "S&ave as ...";
+      this.miSaveAs.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // miExport
+      // 
+      this.miExport.Image = global::bboard.Properties.Resources.export;
+      this.miExport.Name = "miExport";
+      this.miExport.Size = new System.Drawing.Size(124, 22);
+      this.miExport.Tag = "export";
+      this.miExport.Text = "&Export ...";
+      this.miExport.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // toolStripSeparator1
+      // 
+      this.toolStripSeparator1.Name = "toolStripSeparator1";
+      this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
+      // 
+      // miPage
+      // 
+      this.miPage.Image = global::bboard.Properties.Resources.page;
+      this.miPage.Name = "miPage";
+      this.miPage.Size = new System.Drawing.Size(124, 22);
+      this.miPage.Tag = "page";
+      this.miPage.Text = "Pa&ge ...";
+      this.miPage.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // printToolStripMenuItem
+      // 
+      this.printToolStripMenuItem.Image = global::bboard.Properties.Resources.print;
+      this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+      this.printToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+      this.printToolStripMenuItem.Tag = "print";
+      this.printToolStripMenuItem.Text = "&Print ...";
+      this.printToolStripMenuItem.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // toolStripSeparator7
+      // 
+      this.toolStripSeparator7.Name = "toolStripSeparator7";
+      this.toolStripSeparator7.Size = new System.Drawing.Size(121, 6);
+      // 
+      // miFileExit
+      // 
+      this.miFileExit.Image = global::bboard.Properties.Resources.close;
+      this.miFileExit.Name = "miFileExit";
+      this.miFileExit.Size = new System.Drawing.Size(124, 22);
+      this.miFileExit.Tag = "exit";
+      this.miFileExit.Text = "&Exit";
+      this.miFileExit.Click += new System.EventHandler(this.miFile_Click);
+      // 
+      // miEdit
+      // 
+      this.miEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miEditUndo,
+            this.redoToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.miEditClear,
+            this.miEditInvert,
+            this.miEditBlur,
+            this.layersToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.miAutoSnap});
+      this.miEdit.Image = global::bboard.Properties.Resources.clear;
+      this.miEdit.Name = "miEdit";
+      this.miEdit.Size = new System.Drawing.Size(41, 20);
+      this.miEdit.Text = "&E";
+      this.miEdit.ToolTipText = "Edit";
+      // 
+      // miEditUndo
+      // 
+      this.miEditUndo.Image = global::bboard.Properties.Resources.undo;
+      this.miEditUndo.Name = "miEditUndo";
+      this.miEditUndo.Size = new System.Drawing.Size(129, 22);
+      this.miEditUndo.Tag = "undo";
+      this.miEditUndo.Text = "&Undo";
+      this.miEditUndo.Click += new System.EventHandler(this.miEdit_Click);
+      // 
+      // redoToolStripMenuItem
+      // 
+      this.redoToolStripMenuItem.Image = global::bboard.Properties.Resources.redo;
+      this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
+      this.redoToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+      this.redoToolStripMenuItem.Tag = "redo";
+      this.redoToolStripMenuItem.Text = "&Redo";
+      this.redoToolStripMenuItem.Click += new System.EventHandler(this.miEdit_Click);
+      // 
+      // toolStripSeparator3
+      // 
+      this.toolStripSeparator3.Name = "toolStripSeparator3";
+      this.toolStripSeparator3.Size = new System.Drawing.Size(126, 6);
+      // 
+      // miEditClear
+      // 
+      this.miEditClear.Image = global::bboard.Properties.Resources.clear;
+      this.miEditClear.Name = "miEditClear";
+      this.miEditClear.Size = new System.Drawing.Size(129, 22);
+      this.miEditClear.Tag = "clear";
+      this.miEditClear.Text = "&Clear";
+      this.miEditClear.Click += new System.EventHandler(this.miEdit_Click);
+      // 
+      // miEditInvert
+      // 
+      this.miEditInvert.Image = global::bboard.Properties.Resources.invert;
+      this.miEditInvert.Name = "miEditInvert";
+      this.miEditInvert.Size = new System.Drawing.Size(129, 22);
+      this.miEditInvert.Tag = "invert";
+      this.miEditInvert.Text = "&Invert";
+      this.miEditInvert.Click += new System.EventHandler(this.miEdit_Click);
+      // 
+      // miEditBlur
+      // 
+      this.miEditBlur.Image = global::bboard.Properties.Resources.blur;
+      this.miEditBlur.Name = "miEditBlur";
+      this.miEditBlur.Size = new System.Drawing.Size(129, 22);
+      this.miEditBlur.Tag = "blur";
+      this.miEditBlur.Text = "&Blur";
+      this.miEditBlur.Click += new System.EventHandler(this.miEdit_Click);
+      // 
+      // layersToolStripMenuItem
+      // 
+      this.layersToolStripMenuItem.Image = global::bboard.Properties.Resources.layers;
+      this.layersToolStripMenuItem.Name = "layersToolStripMenuItem";
+      this.layersToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+      this.layersToolStripMenuItem.Tag = "layers";
+      this.layersToolStripMenuItem.Text = "Layers";
+      this.layersToolStripMenuItem.Click += new System.EventHandler(this.miEdit_Click);
+      // 
+      // toolStripSeparator5
+      // 
+      this.toolStripSeparator5.Name = "toolStripSeparator5";
+      this.toolStripSeparator5.Size = new System.Drawing.Size(126, 6);
+      // 
+      // miAutoSnap
+      // 
+      this.miAutoSnap.Image = global::bboard.Properties.Resources.snap;
+      this.miAutoSnap.Name = "miAutoSnap";
+      this.miAutoSnap.Size = new System.Drawing.Size(129, 22);
+      this.miAutoSnap.Text = "&Auto Snap";
+      this.miAutoSnap.Click += new System.EventHandler(this.miAutoSnap_Click);
+      // 
+      // miHill
+      // 
+      this.miHill.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miHillCone,
+            this.miHillSphere,
+            this.miHillCylinder,
+            this.miHillSigma,
+            this.miHillNail,
+            this.toolStripSeparator8,
+            this.miHillStair2,
+            this.miHillStair4,
+            this.miHillStair2b,
+            this.miHillStair4b});
+      this.miHill.Image = global::bboard.Properties.Resources.cone;
+      this.miHill.Name = "miHill";
+      this.miHill.Size = new System.Drawing.Size(44, 20);
+      this.miHill.Text = "&H";
+      this.miHill.ToolTipText = "Hill";
+      // 
+      // miHillCone
+      // 
+      this.miHillCone.Image = global::bboard.Properties.Resources.cone;
+      this.miHillCone.Name = "miHillCone";
+      this.miHillCone.Size = new System.Drawing.Size(180, 22);
+      this.miHillCone.Tag = "0";
+      this.miHillCone.Text = "&Cone";
+      this.miHillCone.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miHillSphere
+      // 
+      this.miHillSphere.Image = global::bboard.Properties.Resources.sphere;
+      this.miHillSphere.Name = "miHillSphere";
+      this.miHillSphere.Size = new System.Drawing.Size(180, 22);
+      this.miHillSphere.Tag = "1";
+      this.miHillSphere.Text = "&Sphere";
+      this.miHillSphere.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miHillCylinder
+      // 
+      this.miHillCylinder.Image = global::bboard.Properties.Resources.cylinder;
+      this.miHillCylinder.Name = "miHillCylinder";
+      this.miHillCylinder.Size = new System.Drawing.Size(180, 22);
+      this.miHillCylinder.Tag = "2";
+      this.miHillCylinder.Text = "Cy&linder";
+      this.miHillCylinder.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miHillSigma
+      // 
+      this.miHillSigma.Image = global::bboard.Properties.Resources.sigma;
+      this.miHillSigma.Name = "miHillSigma";
+      this.miHillSigma.Size = new System.Drawing.Size(180, 22);
+      this.miHillSigma.Tag = "3";
+      this.miHillSigma.Text = "Si&gma";
+      this.miHillSigma.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miHillNail
+      // 
+      this.miHillNail.Image = global::bboard.Properties.Resources.nail;
+      this.miHillNail.Name = "miHillNail";
+      this.miHillNail.Size = new System.Drawing.Size(180, 22);
+      this.miHillNail.Tag = "4";
+      this.miHillNail.Text = "&Nail";
+      this.miHillNail.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // toolStripSeparator8
+      // 
+      this.toolStripSeparator8.Name = "toolStripSeparator8";
+      this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
+      // 
+      // miHillStair2
+      // 
+      this.miHillStair2.Image = global::bboard.Properties.Resources.stair2;
+      this.miHillStair2.Name = "miHillStair2";
+      this.miHillStair2.Size = new System.Drawing.Size(180, 22);
+      this.miHillStair2.Tag = "5";
+      this.miHillStair2.Text = "2 St&air";
+      this.miHillStair2.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miHillStair4
+      // 
+      this.miHillStair4.Image = global::bboard.Properties.Resources.stair4;
+      this.miHillStair4.Name = "miHillStair4";
+      this.miHillStair4.Size = new System.Drawing.Size(180, 22);
+      this.miHillStair4.Tag = "7";
+      this.miHillStair4.Text = "4 S&tair";
+      this.miHillStair4.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miHillStair2b
+      // 
+      this.miHillStair2b.Image = global::bboard.Properties.Resources.stair2b;
+      this.miHillStair2b.Name = "miHillStair2b";
+      this.miHillStair2b.Size = new System.Drawing.Size(180, 22);
+      this.miHillStair2b.Tag = "6";
+      this.miHillStair2b.Text = "2 Stair &box";
+      this.miHillStair2b.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miHillStair4b
+      // 
+      this.miHillStair4b.Image = global::bboard.Properties.Resources.stair4b;
+      this.miHillStair4b.Name = "miHillStair4b";
+      this.miHillStair4b.Size = new System.Drawing.Size(180, 22);
+      this.miHillStair4b.Tag = "8";
+      this.miHillStair4b.Text = "4 Stair bo&x";
+      this.miHillStair4b.Click += new System.EventHandler(this.miHill_Click);
+      // 
+      // miCombine
+      // 
+      this.miCombine.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miCombineMax,
+            this.miCombineMul,
+            this.miCombineAdd,
+            this.toolStripSeparator4,
+            this.miCombineNone});
+      this.miCombine.Image = global::bboard.Properties.Resources.max;
+      this.miCombine.Name = "miCombine";
+      this.miCombine.Size = new System.Drawing.Size(43, 20);
+      this.miCombine.Text = "&A";
+      this.miCombine.ToolTipText = "Combine";
+      // 
+      // miCombineMax
+      // 
+      this.miCombineMax.Image = global::bboard.Properties.Resources.max;
+      this.miCombineMax.Name = "miCombineMax";
+      this.miCombineMax.Size = new System.Drawing.Size(103, 22);
+      this.miCombineMax.Tag = "1";
+      this.miCombineMax.Text = "Ma&x";
+      this.miCombineMax.Click += new System.EventHandler(this.miCombine_Click);
+      // 
+      // miCombineMul
+      // 
+      this.miCombineMul.Image = global::bboard.Properties.Resources.mult;
+      this.miCombineMul.Name = "miCombineMul";
+      this.miCombineMul.Size = new System.Drawing.Size(103, 22);
+      this.miCombineMul.Tag = "3";
+      this.miCombineMul.Text = "Mul&t";
+      this.miCombineMul.Click += new System.EventHandler(this.miCombine_Click);
+      // 
+      // miCombineAdd
+      // 
+      this.miCombineAdd.Image = global::bboard.Properties.Resources.add;
+      this.miCombineAdd.Name = "miCombineAdd";
+      this.miCombineAdd.Size = new System.Drawing.Size(103, 22);
+      this.miCombineAdd.Tag = "5";
+      this.miCombineAdd.Text = "&Add";
+      this.miCombineAdd.Click += new System.EventHandler(this.miCombine_Click);
+      // 
+      // toolStripSeparator4
+      // 
+      this.toolStripSeparator4.Name = "toolStripSeparator4";
+      this.toolStripSeparator4.Size = new System.Drawing.Size(100, 6);
+      // 
+      // miCombineNone
+      // 
+      this.miCombineNone.Image = global::bboard.Properties.Resources.color;
+      this.miCombineNone.Name = "miCombineNone";
+      this.miCombineNone.Size = new System.Drawing.Size(103, 22);
+      this.miCombineNone.Tag = "0";
+      this.miCombineNone.Text = "Non&e";
+      this.miCombineNone.Click += new System.EventHandler(this.miCombine_Click);
+      // 
+      // miShape
+      // 
+      this.miShape.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miShapeCircle,
+            this.miShapeSquare,
+            this.miShapeDiamond});
+      this.miShape.Image = global::bboard.Properties.Resources.circle;
+      this.miShape.Name = "miShape";
+      this.miShape.Size = new System.Drawing.Size(41, 20);
+      this.miShape.Text = "&S";
+      // 
+      // miShapeCircle
+      // 
+      this.miShapeCircle.Image = global::bboard.Properties.Resources.circle;
+      this.miShapeCircle.Name = "miShapeCircle";
+      this.miShapeCircle.Size = new System.Drawing.Size(123, 22);
+      this.miShapeCircle.Tag = "0";
+      this.miShapeCircle.Text = "&Circle";
+      this.miShapeCircle.Click += new System.EventHandler(this.miShape_Click);
+      // 
+      // miShapeSquare
+      // 
+      this.miShapeSquare.Image = global::bboard.Properties.Resources.square;
+      this.miShapeSquare.Name = "miShapeSquare";
+      this.miShapeSquare.Size = new System.Drawing.Size(123, 22);
+      this.miShapeSquare.Tag = "1";
+      this.miShapeSquare.Text = "&Square";
+      this.miShapeSquare.Click += new System.EventHandler(this.miShape_Click);
+      // 
+      // miShapeDiamond
+      // 
+      this.miShapeDiamond.Image = global::bboard.Properties.Resources.diamond;
+      this.miShapeDiamond.Name = "miShapeDiamond";
+      this.miShapeDiamond.Size = new System.Drawing.Size(123, 22);
+      this.miShapeDiamond.Tag = "2";
+      this.miShapeDiamond.Text = "&Diamond";
+      this.miShapeDiamond.Click += new System.EventHandler(this.miShape_Click);
+      // 
+      // miColor
+      // 
+      this.miColor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miHillWhite,
+            this.toolStripSeparator2,
+            this.rotateToolStripMenuItem,
+            this.rGBCMYToolStripMenuItem,
+            this.rBToolStripMenuItem});
+      this.miColor.Image = global::bboard.Properties.Resources.white;
+      this.miColor.Name = "miColor";
+      this.miColor.Size = new System.Drawing.Size(43, 20);
+      this.miColor.Text = "&C";
+      this.miColor.ToolTipText = "Color";
+      // 
+      // miHillWhite
+      // 
+      this.miHillWhite.Image = global::bboard.Properties.Resources.white;
+      this.miHillWhite.Name = "miHillWhite";
+      this.miHillWhite.Size = new System.Drawing.Size(149, 22);
+      this.miHillWhite.Text = "&White / Black";
+      this.miHillWhite.Click += new System.EventHandler(this.miWhite_Click);
+      // 
+      // toolStripSeparator2
+      // 
+      this.toolStripSeparator2.Name = "toolStripSeparator2";
+      this.toolStripSeparator2.Size = new System.Drawing.Size(146, 6);
+      // 
+      // rotateToolStripMenuItem
+      // 
+      this.rotateToolStripMenuItem.Image = global::bboard.Properties.Resources.rgb2brg;
+      this.rotateToolStripMenuItem.Name = "rotateToolStripMenuItem";
+      this.rotateToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+      this.rotateToolStripMenuItem.Tag = "rotate";
+      this.rotateToolStripMenuItem.Text = "Rotate";
+      this.rotateToolStripMenuItem.Click += new System.EventHandler(this.miMColor_Click);
+      // 
+      // rGBCMYToolStripMenuItem
+      // 
+      this.rGBCMYToolStripMenuItem.Image = global::bboard.Properties.Resources.rgb2cmy;
+      this.rGBCMYToolStripMenuItem.Name = "rGBCMYToolStripMenuItem";
+      this.rGBCMYToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+      this.rGBCMYToolStripMenuItem.Tag = "rgb2cmy";
+      this.rGBCMYToolStripMenuItem.Text = "RGB <-> CMY";
+      this.rGBCMYToolStripMenuItem.Click += new System.EventHandler(this.miMColor_Click);
+      // 
+      // rBToolStripMenuItem
+      // 
+      this.rBToolStripMenuItem.Image = global::bboard.Properties.Resources.rgb2bgr;
+      this.rBToolStripMenuItem.Name = "rBToolStripMenuItem";
+      this.rBToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+      this.rBToolStripMenuItem.Tag = "rxb";
+      this.rBToolStripMenuItem.Text = "R <-> B";
+      this.rBToolStripMenuItem.Click += new System.EventHandler(this.miMColor_Click);
       // 
       // bBW
       // 
@@ -1202,6 +1253,11 @@
     private System.Windows.Forms.Button bShape;
     private System.Windows.Forms.Button bRadius1;
     private System.Windows.Forms.Button bRadius2;
+    private System.Windows.Forms.ToolStripMenuItem miHillStair4;
+    private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+    private System.Windows.Forms.ToolStripMenuItem miHillStair2;
+    private System.Windows.Forms.ToolStripMenuItem miHillStair2b;
+    private System.Windows.Forms.ToolStripMenuItem miHillStair4b;
   }
 }
 
